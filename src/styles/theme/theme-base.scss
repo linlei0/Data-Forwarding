@@ -1,0 +1,205 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  min-height: 0;
+}
+.app-wrapper {
+  min-height: 100vh;
+
+  .app-header {
+    height: $header_height;
+    line-height: $header_height;
+    flex: 0 0 auto;
+    flex-direction: row;
+
+    .btn-icon {
+      font-size: 20px;
+      border-radius: 4px;
+      margin: 0!important;
+      padding: 14px 12px;
+    }
+    
+    
+    .el-breadcrumb {
+      flex: auto;
+    }
+  }
+
+  .app-body {
+    flex-direction: row;
+
+    .app-sidebar {
+      width: $sidebar_width;
+      min-width: $sidebar_width;
+      max-width: $sidebar_width;
+      flex: 0 0 $sidebar_width;
+      // 设置滚动高度
+      height: calc(100vh - 60px)
+    }
+
+    .app-main-wrapper {
+      // 非常重要，如果没有这个属性，右侧出现el-table时宽度只增不减
+      // flex: 6;
+      overflow-x: hidden;
+      min-height: calc(100vh - 60px);
+      padding:20px;
+      .tags-view-container {
+        height: 41px;
+        flex: 0 0 auto;
+        .el-tabs--card>.el-tabs__header{
+          border: none;
+          .el-tabs__nav {
+            border-width: 1px;
+            border-style: solid;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            overflow: hidden;
+          }
+        }
+
+        .contextmenu {
+          margin: 0;
+          background: #fff;
+          z-index: 100;
+          position: absolute;
+          list-style-type: none;
+          padding: 5px 0;
+          border-radius: 4px;
+          font-size: 12px;
+          font-weight: 400;
+          color: #333;
+          box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .3);
+          li {
+            margin: 0;
+            padding: 7px 16px;
+            cursor: pointer;
+            &:hover {
+              background: #eee;
+            }
+          }
+        }
+      }
+      
+      .app-main {
+        flex:auto;
+        padding: 20px ;
+        border-radius: 0 4px 4px;
+        border:none;
+        background: #FFFFFF;
+        .pagination-container {
+          padding-top: 20px;
+          // position: fixed;
+          // bottom: 40px;
+        }
+
+        .filter-container {
+          // padding-bottom: 10px;
+          .filter-item {
+            display: inline-block;
+            vertical-align: middle;
+            // margin-bottom: 10px;
+          }
+        }
+
+      }
+    }
+
+    // .app-footer {
+    //   padding: 48px 0 24px;
+    //   text-align: center;
+    //   flex: 0 0 auto;
+
+    //   .antd-pro-components-global-footer-index-copyright {
+    //     color: rgba(0,0,0,.45);
+    //     font-size: 14px;
+    //   }
+    // }
+  }
+
+  .app-bg-mask1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  &.collapse {
+    .app-header {
+      .logo {
+        width: $sidebar_collapse_width;
+      }
+    }
+
+    .app-body {
+      .app-sidebar {
+        width: $sidebar_collapse_width ;
+        min-width: $sidebar_collapse_width;
+        max-width: $sidebar_collapse_width;
+        flex: 0 0 $sidebar_collapse_width;
+        // background: red;
+        // flex:0 0 auto
+        // flex: 0 !important
+      }
+    }
+  }
+  
+  .el-menu {
+    background: transparent
+  }
+}
+
+// 动画
+.animation {
+  .app-header {
+    .logo {
+      transition: width .35s ease-out;
+    }
+  }
+
+  .app-body {
+    .app-sidebar {
+      transition: all .35s ease-out;
+    }
+  }
+}
+
+
+.app-left-menu {
+  border-right-width: 0px!important;
+  &.el-menu--collapse {
+    .menu-wrapper{
+      .el-menu-item span,
+      .el-submenu>.el-submenu__title span {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        visibility: hidden;
+        display: inline-block;
+      }
+
+      .el-submenu>.el-submenu__title .el-submenu__icon-arrow {
+        display: none;
+      }
+    }
+  }
+}
+
+.scrollbar-wrapper {
+  overflow-x: hidden!important;
+  .el-scrollbar__view {
+   height: 100%;
+  }
+}
+.el-scrollbar__bar.is-vertical{
+  right: 0px;
+}
+
+.theme-preview {
+  height: 50px;
+  width: 100px;
+  border-radius: 4px;
+  background-size: cover;
+  border: 1px solid $color-border-1;
+}

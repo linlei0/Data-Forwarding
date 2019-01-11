@@ -1,0 +1,46 @@
+$theme-name: 'blue';
+// 主题背景颜色
+$theme-bg-color: #ebf1f6;
+// 主题背景图
+$theme-bg-has-image: false;
+//头部header背景色
+$header-bg-color:#fff;
+//头部header box-shadow 阴影
+$header-shadow-color:rbga(0,0,0,.2);
+//头部左边背景颜色
+$header-left-color:#305FE6; 
+//侧边栏背景色
+$layout-bg-color:#305FE6;
+
+// tab标签页
+$theme-multiple-page-control-color: $color-text-normal;
+$theme-multiple-page-control-color-active: #2f74ff;
+$theme-multiple-page-control-nav-prev-color: #cfd7e5;
+$theme-multiple-page-control-nav-next-color: #cfd7e5;
+$theme-multiple-page-control-border-color: #cfd7e5;
+$theme-multiple-page-control-border-color-active: #FFF;
+$theme-multiple-page-control-background-color: rgba(#000, .03);
+$theme-multiple-page-control-background-color-active: #FFF;
+
+// 顶栏上的文字颜色
+$theme-header-item-color: $color-text-normal;
+$theme-header-item-background-color: transparent;
+// 顶栏上的项目在 hover 时
+$theme-header-item-color-hover: #fff;
+$theme-header-item-background-color-hover: #2071FF;
+
+// 侧边栏上的文字颜色
+$theme-aside-item-color: #fff;
+$theme-aside-item-background-color: transparent;
+// 侧边栏上的项目在 hover 时
+$theme-aside-item-color-hover: #fff;
+$theme-aside-item-background-color-hover: #2071FF;
+// 侧边栏上的项目在 focus 时
+$theme-aside-item-color-focus: #fff;
+$theme-aside-item-background-color-focus: #2071FF;
+// 侧边栏上的项目在 active 时
+$theme-aside-item-color-active:#fff;
+$theme-aside-item-background-color-active: #2071FF;
+
+// 弹出窗颜色配置
+$el-dialog__header:#409EFF;
